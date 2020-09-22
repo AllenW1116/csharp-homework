@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace _1_2
-{
+
+{ 
+
     class Program
     {
         static void Main(string[] args)
