@@ -1,0 +1,7 @@
+D:\c# space\1st-homework\3-1 Order_Manager\bin\Debug\3-1 Order_Manager.exe.config
+D:\c# space\1st-homework\3-1 Order_Manager\bin\Debug\3-1 Order_Manager.exe
+D:\c# space\1st-homework\3-1 Order_Manager\bin\Debug\3-1 Order_Manager.pdb
+D:\c# space\1st-homework\3-1 Order_Manager\obj\Debug\3-1 Order_Manager.csprojAssemblyReference.cache
+D:\c# space\1st-homework\3-1 Order_Manager\obj\Debug\3-1 Order_Manager.csproj.CoreCompileInputs.cache
+D:\c# space\1st-homework\3-1 Order_Manager\obj\Debug\3-1 Order_Manager.exe
+D:\c# space\1st-homework\3-1 Order_Manager\obj\Debug\3-1 Order_Manager.pdb

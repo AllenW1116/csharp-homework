@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<ArrayOfOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Order>
+    <ID>1</ID>
+    <GoodsName>apple</GoodsName>
+    <Customer>allen</Customer>
+    <Price>10</Price>
+  </Order>
+  <Order>
+    <ID>2</ID>
+    <GoodsName>banana</GoodsName>
+    <Customer>allen</Customer>
+    <Price>8</Price>
+  </Order>
+  <Order>
+    <ID>3</ID>
+    <GoodsName>peanut</GoodsName>
+    <Customer>max</Customer>
+    <Price>25</Price>
+  </Order>
+  <Order>
+    <ID>4</ID>
+    <GoodsName>grape</GoodsName>
+    <Customer>zoe</Customer>
+    <Price>30</Price>
+  </Order>
+  <Order>
+    <ID>5</ID>
+    <GoodsName>biscut</GoodsName>
+    <Customer>earnest</Customer>
+    <Price>6</Price>
+  </Order>
+</ArrayOfOrder>
