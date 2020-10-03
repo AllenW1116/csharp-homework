@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Xml.Serialization;
 using System.Xml;
+using System.Text.RegularExpressions;
 
 namespace _3_1_Order_Manager
 {
@@ -25,7 +26,7 @@ namespace _3_1_Order_Manager
     class Function
     {
 
-        public void Fdeleteorder(OrderService os)
+        public void Fdeleteorder(OrderService os) //删除订单
         {
             Console.WriteLine("你想按照哪种方式删除订单？请输入ById或者ByCustomer：");//其实这里应该搞一个按钮，此处简化了
             string str = Console.ReadLine();
@@ -73,7 +74,7 @@ namespace _3_1_Order_Manager
             else Console.WriteLine("删除订单错误！");
         }
 
-        public void Ffindorder(OrderService os)
+        public void Ffindorder(OrderService os)  //查找订单
         {
             Console.WriteLine("你想按照哪种方式查询订单？请输入ById或者ByCustomer或者ByPrice：");//其实这里应该搞一个按钮，此处简化了
             string str = Console.ReadLine();
@@ -119,12 +120,35 @@ namespace _3_1_Order_Manager
                 }
 
             }
+            else if(f==FindType.ByPrice)
+            {
+                
+                try
+                {
+                    Console.WriteLine("你想查找的价格范围下限是？");
+                    int low = Int32.Parse(Console.ReadLine());
+                    Console.WriteLine("你想查找的价格范围上限是？");
+                    int high = Int32.Parse(Console.ReadLine());
+
+                    var orders = os.OrderList.Where(o => o.Price >= low && o.Price <= high).OrderBy(o => o.Price);//使用linq语句,得到一个临时列表
+                    foreach (var item in orders)
+                    {
+                        Console.WriteLine(item.ToString());
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    Console.WriteLine("按照价格" +
+                        "查找错误：" + ex.Message);
+                }
+            }
             else { Console.WriteLine("查找订单错误！"); }
         }
 
 
 
-        public void Falterorder(OrderService os)
+        public void Falterorder(OrderService os)//修改订单
         {
             Console.WriteLine("你想修改ID为多少的订单？（ID是一个订单的唯一凭证，是不可以修改的哦）：");//其实这里应该搞一个按钮，此处简化了
             long id = long.Parse(Console.ReadLine());
