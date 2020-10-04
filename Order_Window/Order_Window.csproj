@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{33ADF31B-E6E6-48E2-8152-D51EFD2E3E1D}</ProjectGuid>
+    <ProjectGuid>{6CBE1913-9880-4F77-ACEF-A1CCFE62DC94}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Order_Window</RootNamespace>
     <AssemblyName>Order_Window</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -52,6 +52,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Function.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="OrderService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
