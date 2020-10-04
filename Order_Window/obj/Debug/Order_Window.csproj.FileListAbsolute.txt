@@ -1,0 +1,10 @@
+D:\c#_space\1st-homework\Order_Window\bin\Debug\Order_Window.exe.config
+D:\c#_space\1st-homework\Order_Window\bin\Debug\Order_Window.exe
+D:\c#_space\1st-homework\Order_Window\bin\Debug\Order_Window.pdb
+D:\c#_space\1st-homework\Order_Window\obj\Debug\Order_Window.csprojAssemblyReference.cache
+D:\c#_space\1st-homework\Order_Window\obj\Debug\Order_Window.Form1.resources
+D:\c#_space\1st-homework\Order_Window\obj\Debug\Order_Window.Properties.Resources.resources
+D:\c#_space\1st-homework\Order_Window\obj\Debug\Order_Window.csproj.GenerateResource.cache
+D:\c#_space\1st-homework\Order_Window\obj\Debug\Order_Window.csproj.CoreCompileInputs.cache
+D:\c#_space\1st-homework\Order_Window\obj\Debug\Order_Window.exe
+D:\c#_space\1st-homework\Order_Window\obj\Debug\Order_Window.pdb
