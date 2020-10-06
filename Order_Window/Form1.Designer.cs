@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.IDlabel = new System.Windows.Forms.Label();
             this.Goodslabel = new System.Windows.Forms.Label();
@@ -55,6 +56,7 @@
             this.Customerheader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Priceheader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Remarksheader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.ListgroupBox.SuspendLayout();
@@ -70,7 +72,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 188F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 141F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
             this.tableLayoutPanel1.Controls.Add(this.IDlabel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.Goodslabel, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.Customerlabel, 2, 0);
@@ -102,7 +104,7 @@
             this.IDlabel.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.IDlabel.Location = new System.Drawing.Point(3, 0);
             this.IDlabel.Name = "IDlabel";
-            this.IDlabel.Size = new System.Drawing.Size(136, 45);
+            this.IDlabel.Size = new System.Drawing.Size(132, 45);
             this.IDlabel.TabIndex = 0;
             this.IDlabel.Text = "订单ID";
             this.IDlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -118,7 +120,7 @@
             this.Goodslabel.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Goodslabel.Location = new System.Drawing.Point(3, 45);
             this.Goodslabel.Name = "Goodslabel";
-            this.Goodslabel.Size = new System.Drawing.Size(136, 46);
+            this.Goodslabel.Size = new System.Drawing.Size(132, 46);
             this.Goodslabel.TabIndex = 1;
             this.Goodslabel.Text = "商品名称";
             this.Goodslabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -130,7 +132,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Customerlabel.AutoSize = true;
             this.Customerlabel.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Customerlabel.Location = new System.Drawing.Point(398, 0);
+            this.Customerlabel.Location = new System.Drawing.Point(387, 0);
             this.Customerlabel.Name = "Customerlabel";
             this.Customerlabel.Size = new System.Drawing.Size(90, 45);
             this.Customerlabel.TabIndex = 2;
@@ -144,7 +146,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Pricelabel.AutoSize = true;
             this.Pricelabel.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Pricelabel.Location = new System.Drawing.Point(398, 45);
+            this.Pricelabel.Location = new System.Drawing.Point(387, 45);
             this.Pricelabel.Name = "Pricelabel";
             this.Pricelabel.Size = new System.Drawing.Size(90, 46);
             this.Pricelabel.TabIndex = 3;
@@ -158,7 +160,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Addbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Addbutton.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Addbutton.Location = new System.Drawing.Point(682, 3);
+            this.Addbutton.Location = new System.Drawing.Point(671, 3);
             this.Addbutton.Name = "Addbutton";
             this.Addbutton.Size = new System.Drawing.Size(135, 39);
             this.Addbutton.TabIndex = 4;
@@ -172,12 +174,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Findbutton.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Findbutton.Location = new System.Drawing.Point(682, 48);
+            this.Findbutton.Location = new System.Drawing.Point(671, 48);
             this.Findbutton.Name = "Findbutton";
             this.Findbutton.Size = new System.Drawing.Size(135, 40);
             this.Findbutton.TabIndex = 5;
             this.Findbutton.Text = "查找订单";
             this.Findbutton.UseVisualStyleBackColor = true;
+            this.Findbutton.Click += new System.EventHandler(this.Findbutton_Click);
             // 
             // Alterbutton
             // 
@@ -185,12 +188,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Alterbutton.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Alterbutton.Location = new System.Drawing.Point(823, 3);
+            this.Alterbutton.Location = new System.Drawing.Point(812, 3);
             this.Alterbutton.Name = "Alterbutton";
-            this.Alterbutton.Size = new System.Drawing.Size(127, 39);
+            this.Alterbutton.Size = new System.Drawing.Size(138, 39);
             this.Alterbutton.TabIndex = 6;
             this.Alterbutton.Text = "修改订单";
             this.Alterbutton.UseVisualStyleBackColor = true;
+            this.Alterbutton.Click += new System.EventHandler(this.Alterbutton_Click);
             // 
             // Deletebutton
             // 
@@ -199,12 +203,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Deletebutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Deletebutton.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Deletebutton.Location = new System.Drawing.Point(823, 48);
+            this.Deletebutton.Location = new System.Drawing.Point(812, 48);
             this.Deletebutton.Name = "Deletebutton";
-            this.Deletebutton.Size = new System.Drawing.Size(127, 40);
+            this.Deletebutton.Size = new System.Drawing.Size(138, 40);
             this.Deletebutton.TabIndex = 7;
             this.Deletebutton.Text = "删除订单";
             this.Deletebutton.UseVisualStyleBackColor = false;
+            this.Deletebutton.Click += new System.EventHandler(this.Deletebutton_Click);
             // 
             // IDtextBox
             // 
@@ -213,9 +218,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.IDtextBox.BackColor = System.Drawing.SystemColors.Info;
             this.IDtextBox.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.IDtextBox.Location = new System.Drawing.Point(145, 3);
+            this.IDtextBox.Location = new System.Drawing.Point(141, 3);
             this.IDtextBox.Name = "IDtextBox";
-            this.IDtextBox.Size = new System.Drawing.Size(247, 32);
+            this.IDtextBox.Size = new System.Drawing.Size(240, 32);
             this.IDtextBox.TabIndex = 8;
             this.IDtextBox.Text = "6";
             this.IDtextBox.TextChanged += new System.EventHandler(this.IDtextBox_TextChanged);
@@ -227,10 +232,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GoodstextBox.BackColor = System.Drawing.SystemColors.Info;
             this.GoodstextBox.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.GoodstextBox.Location = new System.Drawing.Point(145, 48);
+            this.GoodstextBox.Location = new System.Drawing.Point(141, 48);
             this.GoodstextBox.Name = "GoodstextBox";
-            this.GoodstextBox.Size = new System.Drawing.Size(247, 32);
+            this.GoodstextBox.Size = new System.Drawing.Size(240, 32);
             this.GoodstextBox.TabIndex = 9;
+            this.GoodstextBox.Text = "test";
             // 
             // CustomertextBox
             // 
@@ -240,10 +246,11 @@
             this.CustomertextBox.BackColor = System.Drawing.SystemColors.Info;
             this.CustomertextBox.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.CustomertextBox.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.CustomertextBox.Location = new System.Drawing.Point(494, 3);
+            this.CustomertextBox.Location = new System.Drawing.Point(483, 3);
             this.CustomertextBox.Name = "CustomertextBox";
             this.CustomertextBox.Size = new System.Drawing.Size(182, 32);
             this.CustomertextBox.TabIndex = 10;
+            this.CustomertextBox.Text = "test";
             // 
             // PricetextBox
             // 
@@ -252,10 +259,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PricetextBox.BackColor = System.Drawing.SystemColors.Info;
             this.PricetextBox.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.PricetextBox.Location = new System.Drawing.Point(494, 48);
+            this.PricetextBox.Location = new System.Drawing.Point(483, 48);
             this.PricetextBox.Name = "PricetextBox";
             this.PricetextBox.Size = new System.Drawing.Size(182, 32);
             this.PricetextBox.TabIndex = 11;
+            this.PricetextBox.Text = "10";
             // 
             // tableLayoutPanel2
             // 
@@ -267,7 +275,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.21569F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.78431F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 141F));
             this.tableLayoutPanel2.Controls.Add(this.ListgroupBox, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.Exportbutton, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.Inputbutton, 2, 0);
@@ -288,9 +296,9 @@
             this.ListgroupBox.Controls.Add(this.ByPriceUpradioButton);
             this.ListgroupBox.Controls.Add(this.ByIDradioButton);
             this.ListgroupBox.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ListgroupBox.Location = new System.Drawing.Point(275, 3);
+            this.ListgroupBox.Location = new System.Drawing.Point(270, 3);
             this.ListgroupBox.Name = "ListgroupBox";
-            this.ListgroupBox.Size = new System.Drawing.Size(417, 41);
+            this.ListgroupBox.Size = new System.Drawing.Size(407, 41);
             this.ListgroupBox.TabIndex = 0;
             this.ListgroupBox.TabStop = false;
             this.ListgroupBox.Text = "订单排序方式";
@@ -318,6 +326,7 @@
             this.ByPriceUpradioButton.TabIndex = 1;
             this.ByPriceUpradioButton.Text = "价格升序";
             this.ByPriceUpradioButton.UseVisualStyleBackColor = true;
+            this.ByPriceUpradioButton.CheckedChanged += new System.EventHandler(this.ByPriceUpradioButton_CheckedChanged);
             // 
             // ByIDradioButton
             // 
@@ -341,12 +350,13 @@
             this.Exportbutton.AutoSize = true;
             this.Exportbutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Exportbutton.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Exportbutton.Location = new System.Drawing.Point(829, 3);
+            this.Exportbutton.Location = new System.Drawing.Point(814, 3);
             this.Exportbutton.Name = "Exportbutton";
-            this.Exportbutton.Size = new System.Drawing.Size(121, 57);
+            this.Exportbutton.Size = new System.Drawing.Size(136, 57);
             this.Exportbutton.TabIndex = 2;
             this.Exportbutton.Text = "导出订单";
             this.Exportbutton.UseVisualStyleBackColor = true;
+            this.Exportbutton.Click += new System.EventHandler(this.Exportbutton_Click);
             // 
             // Inputbutton
             // 
@@ -355,12 +365,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Inputbutton.AutoSize = true;
             this.Inputbutton.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Inputbutton.Location = new System.Drawing.Point(698, 3);
+            this.Inputbutton.Location = new System.Drawing.Point(683, 3);
             this.Inputbutton.Name = "Inputbutton";
             this.Inputbutton.Size = new System.Drawing.Size(125, 57);
             this.Inputbutton.TabIndex = 1;
             this.Inputbutton.Text = "导入订单";
             this.Inputbutton.UseVisualStyleBackColor = true;
+            this.Inputbutton.Click += new System.EventHandler(this.Inputbutton_Click);
             // 
             // Timelabel
             // 
@@ -371,7 +382,7 @@
             this.Timelabel.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Timelabel.Location = new System.Drawing.Point(3, 0);
             this.Timelabel.Name = "Timelabel";
-            this.Timelabel.Size = new System.Drawing.Size(266, 63);
+            this.Timelabel.Size = new System.Drawing.Size(261, 63);
             this.Timelabel.TabIndex = 3;
             this.Timelabel.Text = "Time";
             this.Timelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -379,6 +390,9 @@
             // 
             // listView
             // 
+            this.listView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.IDheader,
             this.Goodsheader,
@@ -386,13 +400,16 @@
             this.Priceheader,
             this.Remarksheader});
             this.listView.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.listView.FullRowSelect = true;
             this.listView.HideSelection = false;
             this.listView.Location = new System.Drawing.Point(12, 109);
+            this.listView.MultiSelect = false;
             this.listView.Name = "listView";
             this.listView.Size = new System.Drawing.Size(954, 512);
             this.listView.TabIndex = 2;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
+            this.listView.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.as_decslist);
             // 
             // IDheader
             // 
@@ -418,6 +435,10 @@
             // 
             this.Remarksheader.Text = "订单备注";
             this.Remarksheader.Width = 517;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.Form1_Load);
             // 
             // Form1
             // 
@@ -469,6 +490,7 @@
         private System.Windows.Forms.ColumnHeader Customerheader;
         private System.Windows.Forms.ColumnHeader Priceheader;
         private System.Windows.Forms.ColumnHeader Remarksheader;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
